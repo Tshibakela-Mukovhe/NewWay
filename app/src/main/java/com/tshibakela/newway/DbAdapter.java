@@ -7,9 +7,6 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static android.R.id.text1;
-import static com.tshibakela.newway.R.id.number;
-
 /**
  * Created by Tshibakela on 2017/08/02.
  */
@@ -19,35 +16,17 @@ public class DbAdapter {
 
 
     //define static variable
-    public static int dbversion =8;
+    public static int dbversion = 19;
     public static String dbname = "Register_db";
     public static String dbTable = "register";
-
-    private static class DatabaseHelper extends SQLiteOpenHelper {
-        public DatabaseHelper(Context context) {
-            super(context,dbname,null, dbversion);
-        }
-
-        @Override
-        public void onCreate(SQLiteDatabase db) {
-            db.execSQL("CREATE TABLE IF NOT EXISTS "+dbTable+" (_id INTEGER PRIMARY KEY autoincrement,name, number, email, address, program, module, test, exam  UNIQUE(number))");
-        }
-
-        @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            db.execSQL("DROP TABLE IF EXISTS "+dbTable);
-            onCreate(db);
-        }
-    }
-
     //establsh connection with SQLiteDataBase
     private final Context c;
     private DatabaseHelper dbHelper;
     private SQLiteDatabase sqliteDb;
-
     public DbAdapter(Context context) {
         this.c = context;
     }
+
     public DbAdapter open() throws SQLException {
         dbHelper = new DatabaseHelper(c);
         sqliteDb = dbHelper.getWritableDatabase();
@@ -61,20 +40,12 @@ public class DbAdapter {
         }
     }
 
-
     //check entry already in database or not
     public boolean isExist(String num){
         String query = "SELECT number FROM register WHERE number='"+num+"' LIMIT 1";
         Cursor row = sqliteDb.rawQuery(query, null);
         return row.moveToFirst();
     }
-
-
-
-
-
-
-
 
     //edit data entire Student details by admin
     public void update(int id,String text2,String text3,String text4,String text5, String text6,String text7,String text8,String text9) {
@@ -110,6 +81,23 @@ public class DbAdapter {
             row.moveToFirst();
         }
         return row;
+    }
+
+    private static class DatabaseHelper extends SQLiteOpenHelper {
+        public DatabaseHelper(Context context) {
+            super(context, dbname, null, dbversion);
+        }
+
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL("CREATE TABLE IF NOT EXISTS " + dbTable + " (_id INTEGER PRIMARY KEY autoincrement,name, number, email, address, program, module, test, exam, UNIQUE(number))");
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            db.execSQL("DROP TABLE IF EXISTS " + dbTable);
+            onCreate(db);
+        }
     }
 
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,112 +8,185 @@
 
 
     <LinearLayout
-        android:orientation="vertical" android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
-            android:textColor="#88ed009a"
-            android:ems="10"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="#88ed009a" />
+
         <TextView
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:layout_gravity="center_horizontal"
             android:ems="10"
-            android:id="@+id/name"
-            android:layout_gravity="center_horizontal" />
+            android:inputType="textPersonName" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
             android:inputType="textPersonName"
             android:text="Number"
-            android:textColor="#88f700a0"
-            android:ems="10"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="#88f700a0" />
+
         <TextView
+            android:id="@+id/number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
+            android:layout_gravity="center_horizontal"
             android:ems="10"
-            android:id="@+id/number"
-            android:layout_gravity="center_horizontal" />
+            android:inputType="phone" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
             android:inputType="textPersonName"
             android:text="Email"
-            android:textColor="#88f2009d"
-            android:ems="10"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="#88f2009d" />
+
         <TextView
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:layout_gravity="center_horizontal"
             android:ems="10"
-            android:id="@+id/email"
-            android:layout_gravity="center_horizontal" />
+            android:inputType="textEmailAddress" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
             android:inputType="textPersonName"
             android:text="Address"
-            android:textColor="#88ff00a5"
+            android:textColor="#88ff00a5" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:ems="10"
-            android:layout_gravity="center_horizontal" />
+            android:inputType="textMultiLine" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
+            android:layout_gravity="center_horizontal"
             android:ems="10"
-            android:id="@+id/address"
-            android:layout_gravity="center_horizontal" />
+            android:inputType="textPersonName"
+            android:text="Program"
+            android:textColor="#88ff00a5" />
+
+        <TextView
+            android:id="@+id/program"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Module"
+            android:textColor="#88ff00a5" />
+
+        <TextView
+            android:id="@+id/module"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Test"
+            android:textColor="#88ff00a5" />
+
+        <TextView
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Exam"
+            android:textColor="#88ff00a5" />
+
+        <TextView
+            android:id="@+id/exam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="textMultiLine" />
 
 
     </LinearLayout>
 
     <ListView
+        android:id="@+id/listPerformance"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_below="@+id/linearLayout"
-        android:id="@+id/listPerformance"
         />
 
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit"
-        android:onClick="Edit"
-        android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="Edit"
+        android:text="Edit" />
 
     <Button
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete"
-        android:onClick="Delete"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/button4" />
+        android:layout_alignParentRight="true"
+        android:onClick="Delete"
+        android:text="Delete" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="addPerformace"
-        android:textAllCaps="false"
-        android:text="+Performance"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="addPerformace"
+        android:text="+Performance"
+        android:textAllCaps="false" />
 
 </RelativeLayout>

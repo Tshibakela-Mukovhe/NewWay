@@ -1,8 +1,8 @@
 package com.tshibakela.newway;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,10 +24,16 @@ public class EditMembers extends AppCompatActivity {
         email = intent.getStringExtra("EMAIL");
         address = intent.getStringExtra("ADDRESS");
 
+        program = intent.getStringExtra("PROGRAM");
+        module = intent.getStringExtra("MODULE");
+        test = intent.getStringExtra("TEST");
+        exam = intent.getStringExtra("EXAM");
+
         ((EditText) findViewById(R.id.name)).setText(name);
         ((EditText) findViewById(R.id.number)).setText(number);
         ((EditText) findViewById(R.id.email)).setText(email);
         ((EditText) findViewById(R.id.address)).setText(address);
+
         ((EditText) findViewById(R.id.programEdit)).setText(program);
         ((EditText) findViewById(R.id.moduleEdit)).setText(module);
         ((EditText) findViewById(R.id.testEdit)).setText(test);

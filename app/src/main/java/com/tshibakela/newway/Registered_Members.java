@@ -1,13 +1,12 @@
 package com.tshibakela.newway;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static android.R.id.edit;
 import static com.tshibakela.newway.R.layout.activity_register_details;
 
 public class Registered_Members extends AppCompatActivity {
@@ -36,10 +35,10 @@ public class Registered_Members extends AppCompatActivity {
         ((TextView) findViewById(R.id.email)).setText(email);
         ((TextView) findViewById(R.id.address)).setText(address);
 
-        ((TextView) findViewById(R.id.programEdit)).setText(program);
-        ((TextView) findViewById(R.id.moduleEdit)).setText(module);
-        ((TextView) findViewById(R.id.testEdit)).setText(test);
-        ((TextView) findViewById(R.id.testEdit)).setText(exam);
+        ((TextView) findViewById(R.id.program)).setText(program);
+        ((TextView) findViewById(R.id.module)).setText(module);
+        ((TextView) findViewById(R.id.test)).setText(test);
+        ((TextView) findViewById(R.id.exam)).setText(exam);
 
 
         //calling DbAdapter

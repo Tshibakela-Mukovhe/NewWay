@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 String email = row.getString(row.getColumnIndexOrThrow("email"));
                 String address = row.getString(row.getColumnIndexOrThrow("address"));
 
-                String proram = row.getString(row.getColumnIndexOrThrow("proram"));
+                String proram = row.getString(row.getColumnIndexOrThrow("program"));
                 String module = row.getString(row.getColumnIndexOrThrow("module"));
                 String test = row.getString(row.getColumnIndexOrThrow("test"));
                 String exam = row.getString(row.getColumnIndexOrThrow("exam"));
